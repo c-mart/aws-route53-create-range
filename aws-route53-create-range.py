@@ -1,7 +1,5 @@
 #!/usr/bin/python
 
-import route53
-
 """
 Creates many zone records in AWS Route 53 that correspond to a range of numeric values.
 Prompts interactively for the start and end values of the numeric range, and a pattern for the hostanme and IP address.
@@ -24,6 +22,8 @@ Process finished with exit code 0
 ```
 
 """
+
+import route53
 
 aws_access_key_id = raw_input("Enter your AWS access key ID: ")
 aws_secret_access_key = raw_input("Enter your AWS access secret key: ")
