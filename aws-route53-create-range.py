@@ -57,6 +57,7 @@ except NameError as exception:
 for number in range(start_range, end_range):
     hostname = hostname_pattern.replace("_", str(number))
     ip = ip_pattern.replace("_", str(number))
+    print("Creating host {0} with value {1}".format(hostname, ip))
     new_record, change_info = update_zone.create_a_record(
         name=hostname,
         values=[ip],
